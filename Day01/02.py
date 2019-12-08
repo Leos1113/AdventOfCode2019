@@ -5,8 +5,10 @@ def calculateFuel(mass):
 def showTotalMass():
     mass = open('input02.txt').readlines()
     totalMass = 0
+    mass = [int(i) for i in mass]
+
     for i in mass:
-        fuel = calculateFuel(int(i))
+        fuel = calculateFuel(i)
         morefuel = fuel
         count = fuel
         while(count > 0):

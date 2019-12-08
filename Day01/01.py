@@ -3,10 +3,12 @@ def calculateFuel(mass):
 
 
 def showTotalMass():
-    mass = open('input01.txt').readlines()
+    mass = open('./input01.txt').readlines()
     totalMass = 0
+    mass = [int(i) for i in mass]
+
     for i in mass:
-        totalMass += calculateFuel(int(i))
+        totalMass += calculateFuel(i)
     print(totalMass)
 
 
